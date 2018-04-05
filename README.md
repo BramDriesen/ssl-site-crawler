@@ -9,7 +9,50 @@ As of July 2018, Google ([read][1]) is going to start prominently telling its us
 All the data will be stored in a Firebase database to later on sanitize the data and create some infographics.
 
 ## Setup
-TODO
+On a clean Ubunti installation.
+
+apt-get install git nano
+git clone https://github.com/BramDriesen/ssl-site-crawler.git
+mkdir firebase
+touch YOUR_JSON_NAME.json
+nano YOUR_JSON_NAME.json and add you JSON config.
+Copy json config into this file
+sudo apt-get install -y python3-pip
+pip3 install --upgrade pip
+
+Install dependencies:
+pip3 install pyyaml
+
+If you get error: locale.Error: unsupported locale setting
+Run: export LC_ALL=C
+
+pip3 install google
+pip3 install beautifulsoup4
+pip3 install firebase-admin
+pip3 install grpcio
+
+If needed alter the configuration files.
+
+Let's run!
+python3 crawler.py
+
+If you get the following error:
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 821: ordinal not in range(128)
+Follow this: https://askubuntu.com/questions/298971/full-switch-locale-ubuntu-server-installed-with-no-locales-how-to-enable-local
+
+To run in the background on a server install tmux
+apt-get install tmux
+
+Running with tmux
+tmux
+python3 crawler.py
+ctrl + b
+d
+
+Re-attach to session
+tmux a  1
+
+Full tmux cheat sheet: https://gist.github.com/henrik/1967800
 
 ## Firebase setup
 Source: https://firebase.google.com/docs/admin/setup
