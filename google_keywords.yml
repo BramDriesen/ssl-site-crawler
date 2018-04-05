@@ -1,7 +1,6 @@
 # Here you can specify any URL that you really need to have in the results.
 force_include_links:
   - http://www.belgium.be
-
 # Here you can specify specific search results to be excluded based on the URL.
 # The longer this list, the longer it might take to complete 1 search operation.
 exclude_urls:
