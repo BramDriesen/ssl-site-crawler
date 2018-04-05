@@ -1,0 +1,7 @@
+https://stackoverflow.com/a/48092283/2932698
+
+pip3 install pyyaml
+pip3 install google
+pip3 install beautifulsoup4
+pip3 install firebase-admin
+pip3 install grpcio

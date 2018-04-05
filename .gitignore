@@ -1,2 +1,7 @@
 .idea
+/firebase/*
 
+# Ignore local pycharm environments
+/venv
+/venv1
+/venv2

@@ -1,0 +1,15 @@
+verbose_logging: false
+google_search:
+  # If this setting is enabled you will need to provide a google_keywords.yml file.
+  enabled: true
+  # Top level domain.
+  top_level_domain: 'be'
+  # Language.
+  language: 'nl'
+  # Number of to process. Note: Increasing this number will drastically slow down the crawler.
+  number_of_results: 10
+  # Lapse to wait between search requests.
+  timeout: 2.0
+firebase:
+  service_account_json_path: 'firebase/site-crawler-84c7b-firebase-adminsdk-qh60a-7164ecc670.json'
+  collection_name: 'be_sites'
