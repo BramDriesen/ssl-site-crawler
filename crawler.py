@@ -81,9 +81,6 @@ def request_url(url):
             print(error)
         return [2, None, None, None]
 
-    # TODO: This one isn't working correctly.
-    # Test with https://www.reisroutes.be and http://www.reisroutes.be.
-    # www.ancestry.com
     except requests.exceptions.RequestException as error:
         if verbose_logging:
             print(error)
@@ -92,6 +89,9 @@ def request_url(url):
     except requests.exceptions.ConnectTimeout as error:
         if verbose_logging:
             print(error)
+        return [3, None, None, None]
+
+    except:
         return [3, None, None, None]
 
 
